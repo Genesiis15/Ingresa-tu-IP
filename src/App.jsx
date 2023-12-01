@@ -25,7 +25,7 @@ function App() {
 
   const handleBtn = (e) => {
     e.preventDefault();
-    console.log(newIp)
+
     if (validateInput()) {
 
 
@@ -41,7 +41,7 @@ function App() {
       fetch(`https://ip-geolocation-ipwhois-io.p.rapidapi.com/json/?ip=${newIp}`, options)
         .then((res) => { return res.json() })
         .then((res) => {
-          console.log(res)
+
           if (!res.success) {
             Swal.fire({
               position: "center",
@@ -82,7 +82,7 @@ function App() {
         fetch(`https://ip-geolocation-ipwhois-io.p.rapidapi.com/json/?ip=${res.ip}`, options)
           .then((res) => { return res.json() })
           .then((res) => {
-            console.log(res)
+
             setDetail(res)
           })
       })
